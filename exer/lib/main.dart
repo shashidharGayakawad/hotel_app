@@ -43,7 +43,9 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hotel Menu'),
+        backgroundColor: Colors.blue,
+        title: Text('Hotel Menu',
+        ),
       ),
       drawer: AppDrawer(), // Drawer for navigation
       body: _screens[_selectedIndex],
