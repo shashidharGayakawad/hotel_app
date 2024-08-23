@@ -45,7 +45,8 @@ class _MenuScreenState extends State<MenuScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text('Hotel Menu',
+        title: Text(
+          'Hotel Menu',
         ),
       ),
       drawer: AppDrawer(), // Drawer for navigation
@@ -164,44 +165,100 @@ class MenuBody extends StatefulWidget {
 
 class _MenuBodyState extends State<MenuBody> {
   final List<MenuItem> mostPopularItems = [
-    MenuItem(name: 'Grilled Chicken', image: 'assets/images/grilled_chicken.jpg', rating: getRandomRating(), price: 1299),
-    MenuItem(name: 'Cheesecake', image: 'assets/images/cheesecake.jpg', rating: getRandomRating(), price: 699),
-    MenuItem(name: 'Pasta Alfredo', image: 'assets/images/pasta_alfredo.jpg', rating: getRandomRating(), price: 1499),
-    MenuItem(name: 'Tiramisu', image: 'assets/images/tiramisu.jpg', rating: getRandomRating(), price: 799),
-    MenuItem(name: 'Wine', image: 'assets/images/wine.jpg', rating: getRandomRating(), price: 1999),
+    MenuItem(
+        name: 'Grilled Chicken',
+        image: 'assets/images/grilled_chicken.jpeg',
+        rating: getRandomRating(),
+        price: 1299),
+    // MenuItem(name: 'Cheesecake', image: 'assets\images\WhatsApp Image 2024-08-24 at 02.14.34_e7e6002b.jpg', rating: getRandomRating(), price: 699),
+    MenuItem(
+        name: 'Pasta Alfredo',
+        image: 'assets/images/pasta.jpeg',
+        rating: getRandomRating(),
+        price: 1499),
+    // MenuItem(
+    //     name: 'Tiramisu',
+    //     image: 'assets/images/tirimasu.jpeg',
+    //     rating: getRandomRating(),
+    //     price: 799),
+    MenuItem(
+        name: 'Wine',
+        image: 'assets/images/wine.jpeg',
+        rating: getRandomRating(),
+        price: 1999),
   ];
 
   final List<MenuCategory> menuCategories = [
     MenuCategory(
       title: 'Appetizers',
       items: [
-        MenuItem(name: 'Spring Rolls', image: 'assets/images/spring_rolls.jpg', rating: getRandomRating(), price: 599),
-        MenuItem(name: 'Garlic Bread', image: 'assets/images/garlic_bread.jpg', rating: getRandomRating(), price: 499),
-        MenuItem(name: 'Bruschetta', image: 'assets/images/bruschetta.jpg', rating: getRandomRating(), price: 649),
+        MenuItem(name: 'Spring Rolls', image: 'assets/images/springRolls.jpeg', rating: getRandomRating(), price: 599),
+        MenuItem(
+            name: 'Garlic Bread',
+            image: 'assets/images/Garlic-Bread-4-750x750.jpg',
+            rating: getRandomRating(),
+            price: 499),
+        MenuItem(
+            name: 'Bruschetta',
+            image: 'assets/images/Bruschetta.jpg',
+            rating: getRandomRating(),
+            price: 649),
       ],
     ),
     MenuCategory(
       title: 'Main Courses',
       items: [
-        MenuItem(name: 'Grilled Chicken', image: 'assets/images/grilled_chicken.jpg', rating: getRandomRating(), price: 1299),
-        MenuItem(name: 'Pasta Alfredo', image: 'assets/images/pasta_alfredo.jpg', rating: getRandomRating(), price: 1499),
-        MenuItem(name: 'Beef Steak', image: 'assets/images/beef_steak.jpg', rating: getRandomRating(), price: 1899),
+        MenuItem(
+            name: 'Grilled Chicken',
+            image: 'assets/images/grilled_chicken.jpeg',
+            rating: getRandomRating(),
+            price: 1299),
+        MenuItem(
+            name: 'Pasta Alfredo',
+            image: 'assets/images/pasta.jpeg',
+            rating: getRandomRating(),
+            price: 1499),
+        MenuItem(
+            name: 'Beef Steak',
+            image: 'assets/images/beef_steak.jpeg',
+            rating: getRandomRating(),
+            price: 1899),
       ],
     ),
     MenuCategory(
       title: 'Desserts',
       items: [
-        MenuItem(name: 'Cheesecake', image: 'assets/images/cheesecake.jpg', rating: getRandomRating(), price: 699),
-        MenuItem(name: 'Tiramisu', image: 'assets/images/tiramisu.jpg', rating: getRandomRating(), price: 799),
-        MenuItem(name: 'Ice Cream', image: 'assets/images/ice_cream.jpg', rating: getRandomRating(), price: 499),
+        // MenuItem(name: 'Cheesecake', image: '', rating: getRandomRating(), price: 699),
+        // MenuItem(
+        //     name: 'Tiramisu',
+        //     image: 'assets/images/tirimasu.jpeg',
+        //     rating: getRandomRating(),
+        //     price: 799),
+        MenuItem(
+            name: 'Ice Cream',
+            image: 'assets/images/ice_cream.jpg',
+            rating: getRandomRating(),
+            price: 499),
       ],
     ),
     MenuCategory(
       title: 'Drinks',
       items: [
-        MenuItem(name: 'Coke', image: 'assets/images/coke.jpg', rating: getRandomRating(), price: 299),
-        MenuItem(name: 'Lemonade', image: 'assets/images/lemonade.jpg', rating: getRandomRating(), price: 349),
-        MenuItem(name: 'Wine', image: 'assets/images/wine.jpg', rating: getRandomRating(), price: 1999),
+        MenuItem(
+            name: 'Coke',
+            image: 'assets/images/coke.jpeg',
+            rating: getRandomRating(),
+            price: 299),
+        MenuItem(
+            name: 'Lemonade',
+            image: 'assets/images/Lemonade-blog-2.jpg',
+            rating: getRandomRating(),
+            price: 349),
+        MenuItem(
+            name: 'Wine',
+            image: 'assets/images/wine.jpeg',
+            rating: getRandomRating(),
+            price: 1999),
       ],
     ),
   ];
@@ -214,7 +271,8 @@ class _MenuBodyState extends State<MenuBody> {
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text('Most Popular', style: Theme.of(context).textTheme.titleLarge),
+            child: Text('Most Popular',
+                style: Theme.of(context).textTheme.titleLarge),
           ),
           Container(
             height: 180,
@@ -237,7 +295,9 @@ class _MenuBodyState extends State<MenuBody> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(category.title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  Text(category.title,
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                   SizedBox(height: 8),
                   Container(
                     height: 180, // Adjust height as needed
@@ -293,10 +353,13 @@ class _MenuItemCardState extends State<MenuItemCard> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset(widget.item.image, width: 150, height: 100, fit: BoxFit.cover),
+              Image.asset(widget.item.image,
+                  width: 150, height: 100, fit: BoxFit.cover),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text(widget.item.name, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                child: Text(widget.item.name,
+                    style:
+                        TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -304,7 +367,9 @@ class _MenuItemCardState extends State<MenuItemCard> {
                   children: List.generate(5, (starIndex) {
                     return Icon(
                       Icons.star,
-                      color: starIndex < widget.item.rating ? Colors.amber : Colors.grey,
+                      color: starIndex < widget.item.rating
+                          ? Colors.amber
+                          : Colors.grey,
                       size: 16,
                     );
                   }),
@@ -312,7 +377,9 @@ class _MenuItemCardState extends State<MenuItemCard> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text('₹${widget.item.price.toString()}', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
+                child: Text('₹${widget.item.price.toString()}',
+                    style:
+                        TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
               ),
               if (_isSelected)
                 Padding(
@@ -360,7 +427,8 @@ class MyCartScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 final item = Cart.items[index];
                 return ListTile(
-                  leading: Image.asset(item.image, width: 50, height: 50, fit: BoxFit.cover),
+                  leading: Image.asset(item.image,
+                      width: 50, height: 50, fit: BoxFit.cover),
                   title: Text(item.name),
                   subtitle: Text('₹${item.price.toString()}'),
                   trailing: IconButton(
@@ -376,7 +444,8 @@ class MyCartScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text('Total: ₹${Cart.total.toString()}', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            child: Text('Total: ₹${Cart.total.toString()}',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           ),
         ],
       ),
@@ -397,7 +466,11 @@ class MenuItem {
   final double rating;
   final double price;
 
-  MenuItem({required this.name, required this.image, required this.rating, required this.price});
+  MenuItem(
+      {required this.name,
+      required this.image,
+      required this.rating,
+      required this.price});
 }
 
 // Helper function to generate random ratings
